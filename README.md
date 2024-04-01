@@ -1,7 +1,7 @@
 # VLSI-LAB-EXPERIMENTS
 ## AIM: To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
-
-## APPARATUS REQUIRED: Xilinx 14.7 Spartan6 FPGA
+## APPARATUS REQUIRED: 
+• Xilinx 14.7 Spartan6 FPGA
 
 ## PROCEDURE: 
 STEP:1 Start the Xilinx navigator, Select and Name the New project.<br>
@@ -151,40 +151,51 @@ endmodule
 ## OUTPUT:
 
 #### AND GATE:
-![OUTPUT]()
+![316577225-058cddf7-0493-42f9-8576-0279fdf6446e](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/3d945dc1-33cc-4dab-9289-71703774a227)
 
 #### OR GATE:
-![OUTPUT]()
+![316577603-75a71393-5b20-452a-bc0d-9abcab9e3984](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/ed376b61-c0f2-46a1-a51d-e6f2ded86400)
+
 
 #### NAND GATE:
-![OUTPUT]()
+![316577980-6c7ab43f-c1b0-4384-a9a5-ac243a380f89](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/bade7038-1fa0-408c-aab9-2b1ad8586ad7)
+
 
 #### NOR GATE:
-![OUTPUT]()
+![316578307-1b095885-5b54-4807-a907-2d70a3467473](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/48b3a75c-5b3d-4987-8e66-5b404ebc345e)
+
 
 #### XOR GATE:
-![OUTPUT]()
+![316578476-89a52acf-0fe7-463c-a1f4-2cc0381b38e2](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/397652ce-8ecb-4f1c-a5d3-8b43857d1697)
+
 
 #### XNOR GATE:
-![OUTPUT]()
+![316578641-d35dabe8-2eb1-4e7d-bba8-6ceb0c93524a](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/833d043a-fcc6-4104-99a9-21765a56bcda)
+
 
 #### NOT GATE:
-![OUTPUT]()
+![316578799-87506908-7e40-4e93-b885-e0aa45866f88](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/fd7f67c0-8074-4ded-9eb8-309fb303f3e0)
+
 
 #### HALF ADDER:
-![OUTPUT]()
+![316579053-261b9ae9-03e0-42ab-b26a-73b79894bf36](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/d907f097-fe02-40df-9fcf-14cabda17000)
+
 
 #### HALF SUBTRACTOR:
-![OUTPUT]()
+![316579201-b8e72d88-54c2-4b78-9012-e9e24170aa06](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/c9a43fb3-5502-41c6-a4df-6b1aad7f7d95)
+
 
 #### FULL ADDER:
-![OUTPUT]()
+![316579371-db531338-b7e0-40ad-bd21-9de6246cc460](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/f0d7c782-8677-460f-a05c-063580276c5f)
+
 
 #### FULL SUBTRACTOR:
-![OUTPUT]()
+![316579562-fe1e3b31-b3ed-41e1-91f3-34a090a312e8](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/69c23748-a621-4d79-8560-7c72c5e5026b)
+
 
 #### RIPPLE ADDER:
-![OUTPUT]()
+![316579731-57540d99-2b22-42fe-a5d6-d8b96f1b4ed9](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/56429e89-4aad-4e63-a2e5-ee91a36c11de)
+
 
 ## RESULT:
 Hence Logic Gates,Adders and Subtractor are simulated and synthesised using Xilinx ISE.
