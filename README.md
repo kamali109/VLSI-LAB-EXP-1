@@ -194,7 +194,9 @@ endmodule
 
 
 #### RIPPLE ADDER:
-![316579731-57540d99-2b22-42fe-a5d6-d8b96f1b4ed9](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/56429e89-4aad-4e63-a2e5-ee91a36c11de)
+![RA](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/16cd9621-55ec-448a-b912-8a0b0aeefc22)
+
+
 
 
 ## RESULT:
