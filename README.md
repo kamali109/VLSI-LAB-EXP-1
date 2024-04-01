@@ -93,29 +93,41 @@ endmodule
 
 ### Full Adder:
 ```h
-module fadd(a,b,c,sum,carry);
+module FA(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
-wire w1,w2,w3;
-xor g1(w1,a,b);
-and g2(w2,a,b);
-xor g3(sum,w1,c);
-and g4(w3,w1,c);
-or g5(carry,w3,w2);
+assign sum=a^b^c;
+assign carry=a&b|b&c|a&c;
+endmodule
+
+module RCA(a,b,c,sum,carry);
+input[7:0]a,b;
+input c;
+output[7:0]sum;
+output carry;
+wire [6:0]w;
+FA f1(a[0],b[0],c,sum[0],w[0]);
+FA f2(a[1],b[1],w[0],sum[1],w[1]);
+FA f3(a[2],b[2],w[1],sum[2],w[2]);
+FA f4(a[3],b[3],w[2],sum[3],w[3]);
+FA f5(a[4],b[4],w[3],sum[4],w[4]);
+FA f6(a[5],b[5],w[4],sum[5],w[5]);
+FA f7(a[6],b[6],w[5],sum[6],w[6]);
+FA f8(a[7],b[7],w[6],sum[7],carry);
 endmodule
 ```
 
 ### Full Subtractor:
 ```h
-module fs(a,b,bin,d,bout);
-input a,b,bin; 
-output d,bout;
+module FS(a,b,c,difference,borrow);
+input a,b,c;
+output difference,borrow;
 wire w1,w2,w3;
-xor g1(w1,b,bin; 
-xor g2(d,w1,a);
-and g3(w2,a,~w1);
-and g4(w3,~b,bin);
-or g5(bout,w2,w3);
+xor g1(w1,a,b);
+and g2(w2,a,b);
+xor g3(difference,w1,c);
+or g4(borrow,w2,w3);
+and (w3,w1,c);
 endmodule
 ```
 
@@ -186,11 +198,12 @@ endmodule
 
 
 #### FULL ADDER:
-![316579371-db531338-b7e0-40ad-bd21-9de6246cc460](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/f0d7c782-8677-460f-a05c-063580276c5f)
+![FA](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/f4fcbf2a-55c6-4221-a73f-1597e9bdc5a7)
+
 
 
 #### FULL SUBTRACTOR:
-![316579562-fe1e3b31-b3ed-41e1-91f3-34a090a312e8](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/69c23748-a621-4d79-8560-7c72c5e5026b)
+![FS](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/9e55541d-ca17-4c1f-bc9e-e1719d23d6f0)
 
 
 #### RIPPLE ADDER:
