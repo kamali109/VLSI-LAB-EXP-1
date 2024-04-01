@@ -40,12 +40,138 @@ Full Subtractor:
 
 
 VERILOG CODE:
+### Logic gates:
+```h
+module logicgate (a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
+input a,b;  
+output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
+and(andgate,a,b);
+or(orgate,a,b);
+xor(xorgate,a,b);
+nand(nandgate,a,b); 
+nor(norgate,a,b);
+xnor(xnorgate,a,b);
+not(notgate,a);
+endmodule
+```
 
-----Type Verilog Code
+### Half Adder:
+```h
+module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+endmodule
+module multi_2(a,b,p,carry);
+input [1:0]a,b;
+output [2:0]p;
+output carry;
+endmodule
+```
+
+### Half Subtractor:
+```h
+module halfsubtractor(a,b,diff,borrow);
+input a,b;
+output diff,borrow;
+xor g1(diff,a,b);
+and g2(borrow,~a,b);
+endmodule
+```
+
+### Full Adder:
+```h
+module fadd(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+wire w1,w2,w3;
+xor g1(w1,a,b);
+and g2(w2,a,b);
+xor g3(sum,w1,c);
+and g4(w3,w1,c);
+or g5(carry,w3,w2);
+endmodule
+```
+
+### Full Subtractor:
+```h
+module fs(a,b,bin,d,bout);
+input a,b,bin; 
+output d,bout;
+wire w1,w2,w3;
+xor g1(w1,b,bin; 
+xor g2(d,w1,a);
+and g3(w2,a,~w1);
+and g4(w3,~b,bin);
+or g5(bout,w2,w3);
+endmodule
+```
+
+### Ripple Adder:
+```h
+module ripplemod(a, b, cin, sum, cout);
+input [07:0] a;
+input [07:0] b;
+input cin;
+output [7:0]sum;
+output cout;
+wire[6:0] c;
+fulladd a1(a[0],b[0],cin,sum[0],c[0]);
+fulladd a2(a[1],b[1],c[0],sum[1],c[1]);
+fulladd a3(a[2],b[2],c[1],sum[2],c[2]);
+fulladd a4(a[3],b[3],c[2],sum[3],c[3]);
+fulladd a5(a[4],b[4],c[3],sum[4],c[4]);
+fulladd a6(a[5],b[5],c[4],sum[5],c[5]);
+fulladd a7(a[6],b[6],c[5],sum[6],c[6]);
+fulladd a8(a[7],b[7],c[6],sum[7],cout);
+endmodule
+module fulladd(a, b, cin, sum, cout);
+input a;
+input b;
+input cin;
+output sum;
+output cout;
+assign sum=(a^b^cin);
+assign cout=((a&b)|(b&cin)|(a&cin));
+endmodule
+```
 
 OUTPUT:
 
------Place a Waveform Generated from Xilinx ISE
+#### AND GATE:
+![OUTPUT]()
+
+#### OR GATE:
+![OUTPUT]()
+
+#### NAND GATE:
+![OUTPUT]()
+
+#### NOR GATE:
+![OUTPUT]()
+
+#### XOR GATE:
+![OUTPUT]()
+
+#### XNOR GATE:
+![OUTPUT]()
+
+#### NOT GATE:
+![OUTPUT]()
+
+#### HALF ADDER:
+![OUTPUT]()
+
+#### HALF SUBTRACTOR:
+![OUTPUT]()
+
+#### FULL ADDER:
+![OUTPUT]()
+
+#### FULL SUBTRACTOR:
+![OUTPUT]()
+
+#### RIPPLE ADDER:
+![OUTPUT]()
 
 RESULT:
 
