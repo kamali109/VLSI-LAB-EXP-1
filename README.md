@@ -5,7 +5,7 @@ AIM:
 
 APPARATUS REQUIRED:  
 
-Vivado 2023.1
+     Vivado 2023.1
 
 PROCEDURE: 
 ````
@@ -250,5 +250,5 @@ OUTPUT:
 
 RESULT:
 ```
-       Hence, the stimulation and synthesis of a Logic Gates,Adders and Subtractor was run successfully by using Xilinx ISE.
+   Hence, the stimulation and synthesis of a Logic Gates,Adders and Subtractor was run successfully by using Xilinx ISE.
 ```
