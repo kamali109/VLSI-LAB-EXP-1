@@ -1,7 +1,7 @@
-# VLSI-LAB-EXPERIMENTS
+                     VLSI-LAB-EXPERIMENTS
 AIM:  
     
-To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
+    To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
 APPARATUS REQUIRED:  
 
