@@ -8,7 +8,7 @@ APPARATUS REQUIRED:
      Vivado 2023.1
 
 PROCEDURE: 
-````
+```
 STEP:1  Start the Xilinx navigator, Select and Name the New project. 
 
 
@@ -50,7 +50,7 @@ STEP:12  Load the Bit file into the SPARTAN 6 FPGA.
 ```
 Logic Diagram :
 
-Logic Gates:
+# Logic Gates:
 
 
 
