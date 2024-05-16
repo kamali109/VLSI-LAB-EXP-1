@@ -212,8 +212,7 @@ RIPPLE ADDER:
 ```
 OUTPUT:
 
-![RA](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/16cd9621-55ec-448a-b912-8a0b0aeefc22)
-
+![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/a93ae6d4-6a3e-4857-a75f-566fce880498)
 
 
 
