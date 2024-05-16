@@ -1,13 +1,13 @@
                      VLSI-LAB-EXPERIMENTS
-AIM:  
+# AIM:  
     
     To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
-APPARATUS REQUIRED:  
+# APPARATUS REQUIRED:  
 
      Vivado 2023.1
 
-PROCEDURE: 
+# PROCEDURE: 
 ```
 STEP:1  Start the Xilinx navigator, Select and Name the New project. 
 
@@ -66,7 +66,7 @@ Half Adder:
 
 
 
-Full adder:
+# Full adder:
 
 
 
@@ -74,7 +74,7 @@ Full adder:
 
 
 
-Half Subtractor:
+# Half Subtractor:
 
 
 
@@ -83,7 +83,7 @@ Half Subtractor:
 
 
 
-Full Subtractor:
+# Full Subtractor:
 
 
 
@@ -91,7 +91,7 @@ Full Subtractor:
 
 
 
-8 Bit Ripple Carry Adder
+# 8 Bit Ripple Carry Adder
 
 
 
@@ -99,11 +99,11 @@ Full Subtractor:
 
 
 
-VERILOG CODE:
+# VERILOG CODE:
 
 
 
-LOGIC GATES:
+# LOGIC GATES:
 ~~~
       module gate(a,b,w1,w2,w3,w4,w5,w6,w7);
       input a,b;
@@ -120,11 +120,11 @@ LOGIC GATES:
 
 
 
-OUTPUT:
+# OUTPUT:
 
 ![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/21178b59-ee9c-492c-aff9-56895d38b585)
 
-FULL ADDER:
+# FULL ADDER:
 ~~~
        module fulladder(a,b,cin,sum,carry);
        input a,b,cin;
@@ -138,11 +138,11 @@ FULL ADDER:
        endmodule
 ~~~
 
-OUTPUT:
+# OUTPUT:
 
 ![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/7b2568c8-925a-4a56-9ef5-9fd329f0099d)
 
-HALF ADDER:
+# HALF ADDER:
 ~~~
         module hs(a,b,difference,borrow);
        input a,b;
@@ -154,14 +154,14 @@ HALF ADDER:
        endmodule
 ~~~
 
-OUTPUT:
+# OUTPUT:
 
 
 ![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/6517181d-cdbb-450a-b7e2-dbc8be3f3aa6)
 
 
 
-HALF SUBTRACTOR:
+# HALF SUBTRACTOR:
 ~~~
        module hs(a,b,difference,borrow);
        input a,b;
@@ -173,12 +173,12 @@ HALF SUBTRACTOR:
        endmodule
 ~~~
 
-OUTPUT:
+# OUTPUT:
 
 ![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/74f7e9f5-64b1-40b2-bd9c-dffdb9d02661)
 
 
-FULL SUBTRACTOR:
+# FULL SUBTRACTOR:
 ~~~
     module fs(a,b,c,diff,borrow);
     input a,b,c;
@@ -194,7 +194,7 @@ FULL SUBTRACTOR:
     endmodule   
 ~~~
 
-OUTPUT:
+# OUTPUT:
 
 ![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/ba6633a8-7b90-4aa0-91df-434b825bad5c)
 
@@ -244,11 +244,11 @@ OUTPUT:
        endmodule
 ~~~
 
-OUTPUT:
+# OUTPUT:
 
 ![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/9e77cc35-146e-4c43-99a9-5e8ff4192ab5)
 
-RESULT:
+# RESULT:
 ```
    Hence, the stimulation and synthesis of a Logic Gates,Adders and Subtractor was run successfully by using Xilinx ISE.
 ```
