@@ -41,11 +41,146 @@ Full Subtractor:
 
 VERILOG CODE:
 
-----Type Verilog Code
+LOGIC GATES:
+```
+      module gate(a,b,w1,w2,w3,w4,w5,w6,w7);
+      input a,b;
+      output w1,w2,w3,w4,w5,w6,w7;
+      and g1 (w1,a,b);
+      or g2 (w2,a,b);
+      not g3 (w3,a);
+      xor g4 (w4,a,b);
+      xnor g5 (w5,a,b);
+      nand g6 (w6,a,b);
+      nor g7 (w7,a,b);
+      endmodule
+```
 
 OUTPUT:
 
------Place a Waveform Generated from Xilinx ISE
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/160600794/c938146c-92ff-4fc2-9fcb-3495d2eda16e)
+
+FULL ADDER:
+```
+       module fulladder(a,b,cin,sum,carry);
+       input a,b,cin;
+       output sum,carry;
+       wire w1,w2,w3;
+       xor g1(w1,a,b);
+       xor g2(sum,w1,cin);
+       and g3(w2,w1,cin);
+       and  g4(w3,a,b);
+       or g5(carry,w2,w3);
+       endmodule
+```
+OUTPUT:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/160600794/ee61b631-4747-4ea5-8510-b7f0c24f5c1c)
+
+HALF ADDER:
+```
+        module hs(a,b,difference,borrow);
+       input a,b;
+       output difference,borrow;
+       wire w;
+       xor g1(difference,a,b);
+       and g2(borrow,w,b);
+
+       not g3(w,a);
+       endmodule
+```
+OUTPUT:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/160600794/ccebc74f-2d6d-408b-8951-cd16dd34964f)
+
+HALF SUBTRACTOR:
+```
+module hs(a,b,difference,borrow);
+       input a,b;
+       output difference,borrow;
+       wire w;
+       xor g1(difference,a,b);
+       and g2(borrow,w,b);
+       not g3(w,a);
+       endmodule
+```
+OUTPUT:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/160600794/3955e1f6-8358-4cf5-a59d-fec92a1a0b6c)
+
+FULL SUBTRACTOR:
+```
+module fs(a,b,c,diff,borrow);
+    input a,b,c;
+    output diff,borrow;
+    wire w1,w2,w3,w4,w5;
+    xor g1(w3,a,b);
+    xor g2(diff,c,w3);
+    and g3(w2,b,w1);
+    and g4(w5,w4,c);
+    not g5(w1,a);
+    not g6(w4,w3);
+    nor g7(borrow,w5,w2);
+    endmodule
+```
+OUTPUT:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/160600794/948bfb4e-eae1-4128-b3aa-0afb5a1064a6)
+
+8 RIPPLE CARRY ADDER:
+```
+  module fa(a,b,cin,sum,carry);
+       input a,b,cin;
+       output sum,carry;
+       wire w1,w2,w3;
+       xor g1(w1,a,b);
+       and g2(w3,a,b);
+       xor g3(sum,w1,cin);
+       and g4(w2,w1,cin);
+       or g5(carry,w2,w3);
+ endmodule
+ 
+ module rca(a,b,cin,sum,cout);
+        input[3:0]a,b;
+        input cin;
+        output [3:0]sum;
+        output cout;
+        wire w1,w2,w3;
+      fa g1(.a(a[0]),
+            .b(b[0]),
+            .cin(cin),
+            .sum(sum[0]),
+            .carry(c1)
+            );
+       fa g2(.a(a[1]),
+             .b(b[1]),
+             .cin(c1),
+             .sum(sum[1]),
+             .carry(c2)
+             );
+       fa g3(.a(a[2]),
+             .b(b[2]),
+             .cin(c2),
+             .sum(sum[2]),
+             .carry(c3)
+             );
+        fa g4(.a(a[3]),
+              .b(b[2]),
+              .cin(c3),
+              .sum(sum[3]),
+              .carry(cout)
+              );
+       endmodule
+```
+OUTPUT:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/160600794/cf9f16ab-1136-4b6c-af44-b8b4de078c60)
 
 RESULT:
+```
+    Hence, the stimulation and synthesis of a Logic Gates,Adders and Subtractor was run successfully by using Xilinx ISE.
+```
+
+
+
 
