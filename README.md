@@ -58,7 +58,7 @@ STEP:12 Load the Bit file into the SPARTAN 6 FPGA.<br>
 
 ## VERILOG CODE:
 
-### Logic gates:
+Logic gates:
 ```h
 module logicgate (a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
 input a,b;  
@@ -73,32 +73,29 @@ not(notgate,a);
 endmodule
 ```
 
-## OUTPUT:
+ OUTPUT:
 
-#### AND GATE:
+AND GATE:
 ![316577225-058cddf7-0493-42f9-8576-0279fdf6446e](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/3d945dc1-33cc-4dab-9289-71703774a227)
 
-#### OR GATE:
+ OR GATE:
 ![316577603-75a71393-5b20-452a-bc0d-9abcab9e3984](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/ed376b61-c0f2-46a1-a51d-e6f2ded86400)
 
 
-#### NAND GATE:
+NAND GATE:
 ![316577980-6c7ab43f-c1b0-4384-a9a5-ac243a380f89](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/bade7038-1fa0-408c-aab9-2b1ad8586ad7)
 
 
-#### NOR GATE:
+NOR GATE:
 ![316578307-1b095885-5b54-4807-a907-2d70a3467473](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/48b3a75c-5b3d-4987-8e66-5b404ebc345e)
 
-
-#### XOR GATE:
+XOR GATE:
 ![316578476-89a52acf-0fe7-463c-a1f4-2cc0381b38e2](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/397652ce-8ecb-4f1c-a5d3-8b43857d1697)
 
-
-#### XNOR GATE:
+XNOR GATE:
 ![316578641-d35dabe8-2eb1-4e7d-bba8-6ceb0c93524a](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/833d043a-fcc6-4104-99a9-21765a56bcda)
 
-
-#### NOT GATE:
+ NOT GATE:
 ![316578799-87506908-7e40-4e93-b885-e0aa45866f88](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/fd7f67c0-8074-4ded-9eb8-309fb303f3e0)
 
 HALF ADDER:
