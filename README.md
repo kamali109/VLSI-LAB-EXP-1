@@ -131,54 +131,35 @@ STEP:12  Load the Bit file into the SPARTAN 6 FPGA.
 ![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/cb9e6496-e1e9-401d-8fad-a8d9624accf9)
 
 # CODE:
-~~~
-       module fa(a,b,cin,sum,carry);
-       input a,b,cin;
-       output sum,carry;
-       wire w1,w2,w3;
-       xor g1(w1,a,b);
-       and g2(w3,a,b);
-       xor g3(sum,w1,cin);
-       and g4(w2,w1,cin);
-       or g5(carry,w2,w3);
- endmodule
- 
- module rca(a,b,cin,sum,cout);
-        input[3:0]a,b;
-        input cin;
-        output [3:0]sum;
-        output cout;
-        wire w1,w2,w3;
-      fa g1(.a(a[0]),
-            .b(b[0]),
-            .cin(cin),
-            .sum(sum[0]),
-            .carry(c1)
-            );
-       fa g2(.a(a[1]),
-             .b(b[1]),
-             .cin(c1),
-             .sum(sum[1]),
-             .carry(c2)
-             );
-       fa g3(.a(a[2]),
-             .b(b[2]),
-             .cin(c2),
-             .sum(sum[2]),
-             .carry(c3)
-             );
-        fa g4(.a(a[3]),
-              .b(b[2]),
-              .cin(c3),
-              .sum(sum[3]),
-              .carry(cout)
-              );
-       endmodule
-~~~
+```c
+module FA(a, b, c, sum, carry);
+input a, b, c;
+output sum, carry;
+assign sum=a ^ b ^ c;
+assign carry=a & b|b & c|a & c;
+endmodule
+
+module RCA(a, b, c, sum, carry);
+input [7:0] a, b;
+input c;
+output [7:0] sum;
+output carry;
+wire [6:0] w;
+FA f1(a[0], b[0], c, sum[0], w[0]);
+FA f2(a[1], b[1], w[0], sum[1], w[1]);
+FA f3(a[2], b[2], w[1], sum[2], w[2]);
+FA f4(a[3], b[3], w[2], sum[3], w[3]);
+FA f5(a[4], b[4], w[3], sum[4], w[4]);
+FA f6(a[5], b[5], w[4], sum[5], w[5]);
+FA f7(a[6], b[6], w[5], sum[6], w[6]);
+FA f8(a[7], b[7], w[6], sum[7], carry);
+endmodule
+```
 
 # OUTPUT:
 
-![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/9e77cc35-146e-4c43-99a9-5e8ff4192ab5)
+![image](https://github.com/kamali109/VLSI-LAB-EXP-1/assets/160600794/56258af5-8733-47d1-859b-9cde799ea2bb)
+
 
 # RESULT:
 ```
